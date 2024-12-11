@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
-  - Lookable
+  - CinemachineTarget
+  - Harpe
+  - Piano
+  - Violon
+  - Contrebasse
+  - Violoncelle
   layers:
   - Default
   - TransparentFX
@@ -13,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Lookable
+  - Projecteur
   - 
   - 
   - 

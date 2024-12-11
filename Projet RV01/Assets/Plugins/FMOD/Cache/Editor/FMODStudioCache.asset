@@ -1,0 +1,541 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9209200473026027895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Timpani
+  m_EditorClassIdentifier: 
+  Path: event:/Timpani
+  Guid:
+    Data1: -1793851055
+    Data2: 1151169369
+    Data3: -1312176962
+    Data4: -1162203816
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-9015668144604042110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cello
+  m_EditorClassIdentifier: 
+  Path: event:/Cello
+  Guid:
+    Data1: 1671599630
+    Data2: 1088079693
+    Data3: 1366829214
+    Data4: 1636701651
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-7964588155963408035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Trombone
+  m_EditorClassIdentifier: 
+  Path: event:/Trombone
+  Guid:
+    Data1: 1086423800
+    Data2: 1308396168
+    Data3: -1413845075
+    Data4: -1360429336
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-7732324047942465168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Horns
+  m_EditorClassIdentifier: 
+  Path: event:/Horns
+  Guid:
+    Data1: -1169480559
+    Data2: 1236794839
+    Data3: 429994371
+    Data4: -1909995889
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-4314850455850608280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Percs 2
+  m_EditorClassIdentifier: 
+  Path: event:/Percs 2
+  Guid:
+    Data1: 683887571
+    Data2: 1245804107
+    Data3: -483379571
+    Data4: -19674972
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-2155816774814505216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Violas
+  m_EditorClassIdentifier: 
+  Path: event:/Violas
+  Guid:
+    Data1: -1374555605
+    Data2: 1109471445
+    Data3: -1383159123
+    Data4: -2078880487
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-1690023304744012612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: RV01/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638695264287821485
+  FileSizes:
+  - Name: Desktop
+    Value: 4856448
+  Exists: 1
+--- !u!114 &-293964491950478116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flute 1
+  m_EditorClassIdentifier: 
+  Path: event:/Flute 1
+  Guid:
+    Data1: 828553902
+    Data2: 1309854946
+    Data3: -941812037
+    Data4: 1783329547
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 5337021166900784106}
+  - {fileID: -1690023304744012612}
+  EditorEvents:
+  - {fileID: 922684560739358974}
+  - {fileID: -9015668144604042110}
+  - {fileID: 8909707115254011236}
+  - {fileID: -2155816774814505216}
+  - {fileID: 2092929176435842539}
+  - {fileID: -9209200473026027895}
+  - {fileID: 4175808229469234526}
+  - {fileID: -7732324047942465168}
+  - {fileID: 9204418362176647006}
+  - {fileID: -293964491950478116}
+  - {fileID: 4180198171320936318}
+  - {fileID: -4314850455850608280}
+  - {fileID: 7753837950535612863}
+  - {fileID: 7322726592970398110}
+  - {fileID: 653461977442829237}
+  - {fileID: 2479862360822425369}
+  - {fileID: -7964588155963408035}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: -1690023304744012612}
+  StringsBanks:
+  - {fileID: 5337021166900784106}
+  cacheTime: 638695264287831576
+  cacheVersion: 131621
+--- !u!114 &653461977442829237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Percs 1
+  m_EditorClassIdentifier: 
+  Path: event:/Percs 1
+  Guid:
+    Data1: 71352043
+    Data2: 1079401885
+    Data3: -2135382636
+    Data4: 1863068996
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &922684560739358974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Harpe 1
+  m_EditorClassIdentifier: 
+  Path: event:/Harpe 1
+  Guid:
+    Data1: 558659083
+    Data2: 1205222530
+    Data3: -1321220455
+    Data4: -723962456
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &2092929176435842539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Violin 1
+  m_EditorClassIdentifier: 
+  Path: event:/Violin 1
+  Guid:
+    Data1: 70967628
+    Data2: 1277857945
+    Data3: 1666516880
+    Data4: -800406398
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &2479862360822425369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Flute 2
+  m_EditorClassIdentifier: 
+  Path: event:/Flute 2
+  Guid:
+    Data1: -2036366092
+    Data2: 1318352111
+    Data3: 1614548104
+    Data4: -1733851885
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &4175808229469234526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bass 2
+  m_EditorClassIdentifier: 
+  Path: event:/Bass 2
+  Guid:
+    Data1: -88709490
+    Data2: 1334888696
+    Data3: 846223266
+    Data4: -1278506812
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &4180198171320936318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Violin 2
+  m_EditorClassIdentifier: 
+  Path: event:/Violin 2
+  Guid:
+    Data1: -1521208393
+    Data2: 1285229777
+    Data3: -1941604974
+    Data4: 1151266440
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &5337021166900784106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: RV01/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638695264287831576
+  FileSizes:
+  - Name: Desktop
+    Value: 1478
+  Exists: 1
+--- !u!114 &7322726592970398110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Bass 1
+  m_EditorClassIdentifier: 
+  Path: event:/Bass 1
+  Guid:
+    Data1: 793919723
+    Data2: 1253658310
+    Data3: 995520949
+    Data4: -134064706
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &7753837950535612863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Harpe 2
+  m_EditorClassIdentifier: 
+  Path: event:/Harpe 2
+  Guid:
+    Data1: 266791132
+    Data2: 1238247216
+    Data3: 135709335
+    Data4: 227457516
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &8909707115254011236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Violin 3
+  m_EditorClassIdentifier: 
+  Path: event:/Violin 3
+  Guid:
+    Data1: -546911959
+    Data2: 1161117529
+    Data3: 2007372211
+    Data4: 811751138
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &9204418362176647006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Trumpet
+  m_EditorClassIdentifier: 
+  Path: event:/Trumpet
+  Guid:
+    Data1: -1497692250
+    Data2: 1204169244
+    Data3: -842774627
+    Data4: 2106861370
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666

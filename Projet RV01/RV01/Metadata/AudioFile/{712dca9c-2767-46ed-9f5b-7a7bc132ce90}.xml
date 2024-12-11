@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{712dca9c-2767-46ed-9f5b-7a7bc132ce90}">
+		<property name="assetPath">
+			<value>Jurassic_Trombones.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>42.666213151927437</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f9a16251-aa79-45e7-ac31-18fecb670d26}</destination>
+		</relationship>
+	</object>
+</objects>
