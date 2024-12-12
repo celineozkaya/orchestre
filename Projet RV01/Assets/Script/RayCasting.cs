@@ -7,6 +7,12 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class RayCasting : MonoBehaviour
 {
+
+    [SerializeField]
+    [Tooltip("The reference to the action of Grab (grab clic).")]
+    InputActionReference Grab;
+
+
     public Camera camera;
     private LayerMask lookableLayer; // instruments que l'on dirige
     private LayerMask projecteurLayer; // 
@@ -27,7 +33,6 @@ public class RayCasting : MonoBehaviour
         lookableLayer = LayerMask.GetMask("Lookable");
         projecteurLayer = LayerMask.GetMask("Projecteur");
         //Debug.Log("start");
-        //jj
     }
 
     // Update is called once per frame
@@ -76,7 +81,7 @@ public class RayCasting : MonoBehaviour
 
                     // retirer le highlight de currentObject
                     // ResetEmission(currentObject);
-                    Debug.Log("ici3");
+                    //Debug.Log("ici3");
 
                 AdjustSpotlightIntensity(currentObject.tag, minIntensity);
                 Debug.Log("currentObject.tag : "+ currentObject.tag);
@@ -88,7 +93,7 @@ public class RayCasting : MonoBehaviour
 
     // on veut edit la lumiere du spotlight (spotlight > emission > augmenter intensité (de 25Ev à 30Ev)
     // ajouter le highlight à l'objet obj
-    private void SetEmission(GameObject obj, Color emissionColor){
+/*    private void SetEmission(GameObject obj, Color emissionColor){
         Renderer renderer = obj.GetComponent<Renderer>(); // recup render
         if (renderer != null){
             Material material = renderer.material; 
@@ -101,15 +106,15 @@ public class RayCasting : MonoBehaviour
             }
         }
         
-    }
+    }*/
 
     // retirer le hightlight de l'objet obj
-    private void ResetEmission(GameObject obj){
+/*    private void ResetEmission(GameObject obj){
         Renderer renderer = obj.GetComponent<Renderer>(); // // recup render
         if (renderer != null && originalMaterial != null){
             renderer.material = originalMaterial; // re applique le matériau d'origine
         }
-    }
+    }*/
 
     public static GameObject FindGameObjectWithLayerAndTag(int layer, string tag)
     {
@@ -132,19 +137,29 @@ public class RayCasting : MonoBehaviour
         Debug.Log($"[AdjustSpotlightIntensity] Tag: {tag}, TargetIntensity: {targetIntensity}");
         Debug.Log("nom spot : " + spot.name);
 
-        //print(projecteurLayer);
-
-
         spot.GetComponent<HDAdditionalLightData>().SetIntensity(targetIntensity, LightUnit.Ev100);
 
         
     }
 
-    //
-    // marche pas
+    private void OnEnable()
+    {
+        Grab.action.Enable(); // activer action
+        Grab.action.performed += OnGrab; // listener pour le OnGrab
+
+    }
+
+    private void OnDisable()
+    {
+        Grab.action.performed -= OnGrab; // retirer listener pour le OnGrab
+        Grab.action.Disable(); // deactiver action
+
+    }
+
+    
     // si clic sur side clic = grab move (> grip)
     // grip donne un float
-    void OnGrab()
+    private void OnGrab(InputAction.CallbackContext context)
     {
         Debug.Log("dans OnGrab");
 

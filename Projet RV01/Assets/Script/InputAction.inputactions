@@ -1,0 +1,62 @@
+{
+    "name": "InputAction",
+    "maps": [
+        {
+            "name": "tempo",
+            "id": "639eae17-19d0-4974-a2a5-f2106c73f679",
+            "actions": [
+                {
+                    "name": "Trigger",
+                    "type": "Button",
+                    "id": "c45ac916-10f5-4c93-ac8d-cee8a18e9f24",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a959f0c9-ccfd-435f-a032-af3cd18da54a",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "selectInstrument",
+            "id": "23ef54ed-a8c5-4dc0-938c-f15b5f7b069a",
+            "actions": [
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "39f421c1-eeed-44ba-b81d-9e88f4f794ce",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b3603e32-374a-489e-b850-d3cad91cf338",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

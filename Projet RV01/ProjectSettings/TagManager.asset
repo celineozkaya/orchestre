@@ -11,6 +11,7 @@ TagManager:
   - Violon
   - Contrebasse
   - Violoncelle
+  - Controller
   layers:
   - Default
   - TransparentFX

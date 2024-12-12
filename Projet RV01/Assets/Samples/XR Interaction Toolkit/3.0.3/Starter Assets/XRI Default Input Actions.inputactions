@@ -461,15 +461,6 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Trigger",
-                    "type": "Button",
-                    "id": "c6862454-98eb-4e11-a473-d86eb1f73f2a",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -723,17 +714,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Grab",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9ca79d90-eac8-4041-aaf0-8a3541f5c459",
-                    "path": "<XRController>{LeftHand}/triggerPressed",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Trigger",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1288,6 +1268,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Trigger",
+                    "type": "Button",
+                    "id": "eb2aa290-d083-45ee-8389-2d0b38567e7c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grab",
+                    "type": "Button",
+                    "id": "f0b8a56d-687f-4fdf-bddd-577a94cfb39a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1378,6 +1376,17 @@
                     "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "3f7a8e91-0256-4626-b8b8-acfc5e5ab240",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -1530,6 +1539,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Thumbstick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4698e932-2a6b-4c84-be25-cbc3ccbb6e2d",
+                    "path": "<XRController>{RightHand}/gripButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
