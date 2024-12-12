@@ -48,10 +48,38 @@
                     "name": "",
                     "id": "b3603e32-374a-489e-b850-d3cad91cf338",
                     "path": "<XRController>{RightHand}/gripPressed",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "intensite",
+            "id": "43841b39-c13c-44b9-8583-91ac6961800d",
+            "actions": [
+                {
+                    "name": "validerIntensite",
+                    "type": "Button",
+                    "id": "72aa1509-4648-4e12-9039-c8292dad20ff",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "fbf8a9a8-ce49-4a30-aa3e-fd4fd5090af0",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "validerIntensite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

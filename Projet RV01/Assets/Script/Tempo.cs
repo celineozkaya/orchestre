@@ -7,14 +7,14 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 public class Tempo : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("The reference to the action of Trigger (gachette clic).")]
+    [Tooltip("The reference to the action of Trigger (gachette clic right).")]
     InputActionReference Trigger;
     public GameObject tempoObject; //obj tempo 
     public Transform controller; // transform du controller conserné
     public Camera camera; // main camera du XR Origin
     public float distanceFromUser = 1.5f; // distance de user à laquelle placer l'obj tempo 
     public float rayLength = 5f;    // taille du rayon sortant du controlleur
-
+    private float tempo; // tempo
 
     private bool isActive = false; //  indique si tempoObject est actif dans la scène
     private bool timerRunning = false; // indique si le timer est en cours d'exécution
@@ -103,7 +103,7 @@ public class Tempo : MonoBehaviour
     }
 
     // arrete le timer et retourne le tempo
-    void StopTimer()
+    float StopTimer()
     {
         Debug.Log("dans StopTimer");
 
@@ -113,9 +113,11 @@ public class Tempo : MonoBehaviour
             isActive = false;
             timerRunning = false;
 
-            float tempo = counter / timer;
+            tempo = counter / timer;
             Debug.Log("Tempo: " + tempo);
         }
+
+        return 0.0f; // bof voir si ca pose pas pb
     }
 
     // gere collision entre le rayon du controller et tempoObject
@@ -132,6 +134,11 @@ public class Tempo : MonoBehaviour
         HapticImpulsePlayer haptic = controller.GetComponent<HapticImpulsePlayer>();
         haptic.SendHapticImpulse(1, 0.1f, 30);
 
+    }
+
+    public float getTempo()
+    {
+        return tempo;
     }
 }
 

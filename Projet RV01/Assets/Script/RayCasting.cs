@@ -9,10 +9,10 @@ public class RayCasting : MonoBehaviour
 {
 
     [SerializeField]
-    [Tooltip("The reference to the action of Grab (grab clic).")]
+    [Tooltip("The reference to the action of Grab (grab clic right).")]
     InputActionReference Grab;
 
-
+    //ccc
     public Camera camera;
     private LayerMask lookableLayer; // instruments que l'on dirige
     private LayerMask projecteurLayer; // 
@@ -159,7 +159,7 @@ public class RayCasting : MonoBehaviour
     
     // si clic sur side clic = grab move (> grip)
     // grip donne un float
-    private void OnGrab(InputAction.CallbackContext context)
+  void OnGrab(InputAction.CallbackContext context)
     {
         Debug.Log("dans OnGrab");
 
@@ -191,5 +191,12 @@ public class RayCasting : MonoBehaviour
             }
         }
     }
+
+    public GameObject getSelectedObject()
+    {
+        return selectedObject;
+    }
+
+
 
 }
