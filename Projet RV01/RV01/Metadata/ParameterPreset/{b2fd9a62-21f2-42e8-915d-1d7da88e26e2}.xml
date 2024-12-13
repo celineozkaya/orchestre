@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{b2fd9a62-21f2-42e8-915d-1d7da88e26e2}">
+		<property name="name">
+			<value>Pitch Shift</value>
+		</property>
+		<relationship name="folder">
+			<destination>{f99acbc3-b985-4c1d-9ad9-e7369fbbf71c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{49742ec7-7763-42b2-8380-03d10b98fb4d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{49742ec7-7763-42b2-8380-03d10b98fb4d}">
+		<property name="minimum">
+			<value>0.5</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

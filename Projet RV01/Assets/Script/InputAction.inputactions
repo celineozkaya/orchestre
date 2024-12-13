@@ -75,7 +75,7 @@
                 {
                     "name": "",
                     "id": "fbf8a9a8-ce49-4a30-aa3e-fd4fd5090af0",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

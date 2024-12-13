@@ -14,16 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Timpani
   Guid:
-    Data1: -1793851055
-    Data2: 1151169369
-    Data3: -1312176962
-    Data4: -1162203816
+    Data1: -245281892
+    Data2: 1277296565
+    Data3: 628132533
+    Data4: -390539589
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 7389654178328230646}
+  - {fileID: 6701683984618570046}
+  - {fileID: -978578224224913151}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
@@ -41,20 +44,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Cello
   Guid:
-    Data1: 1671599630
-    Data2: 1088079693
-    Data3: 1366829214
-    Data4: 1636701651
+    Data1: -1169480559
+    Data2: 1236794839
+    Data3: 429994371
+    Data4: -1909995889
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 166675486471506047}
+  - {fileID: -1580257409331534672}
+  - {fileID: 7260134706687832679}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
---- !u!114 &-7964588155963408035
+--- !u!114 &-8173719864846187221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,24 +69,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Trombone
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trumpets/Pitch
   m_EditorClassIdentifier: 
-  Path: event:/Trombone
-  Guid:
-    Data1: 1086423800
-    Data2: 1308396168
-    Data3: -1413845075
-    Data4: -1360429336
-  Banks:
-  - {fileID: -1690023304744012612}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 42666
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-8096807384229463087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 1/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7732324047942465168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,19 +122,268 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Horns
   Guid:
-    Data1: -1169480559
-    Data2: 1236794839
-    Data3: 429994371
-    Data4: -1909995889
+    Data1: 729045653
+    Data2: 1238959757
+    Data3: -223613768
+    Data4: -1592775646
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -822695916110248410}
+  - {fileID: -895837701700280965}
+  - {fileID: -2201086438071936322}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
+--- !u!114 &-7282930552113077865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 1/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-7127669209857893869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 2/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6883386770781661239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 3/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6570445005890995337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 2/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6432820274502358121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Trombones
+  m_EditorClassIdentifier: 
+  Path: event:/Trombones
+  Guid:
+    Data1: 952073428
+    Data2: 1259772763
+    Data3: 794886275
+    Data4: 1573797989
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3354673386357697145}
+  - {fileID: -1318150899474222112}
+  - {fileID: 2055051157192208961}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &-6162588935935781234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5870811935298074924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violas/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5651309162476970276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 2/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4885574153327018650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 3/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4768666250083914402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 2/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4314850455850608280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,19 +398,142 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Percs 2
   Guid:
-    Data1: 683887571
-    Data2: 1245804107
-    Data3: -483379571
-    Data4: -19674972
+    Data1: -1369462101
+    Data2: 1165436697
+    Data3: -155595113
+    Data4: 1189792370
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -4768666250083914402}
+  - {fileID: -6570445005890995337}
+  - {fileID: 5695732814516424173}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
+--- !u!114 &-4115980948210654433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3901771900905516081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3354673386357697145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trombones/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2342933698507414522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 1/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2201086438071936322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Horns/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2155816774814505216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,16 +548,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Violas
   Guid:
-    Data1: -1374555605
-    Data2: 1109471445
-    Data3: -1383159123
-    Data4: -2078880487
+    Data1: -1725487868
+    Data2: 1159771824
+    Data3: -449410640
+    Data4: 1033760040
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6209207872560775126}
+  - {fileID: 2519673685649349647}
+  - {fileID: -5870811935298074924}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
@@ -177,10 +579,226 @@ MonoBehaviour:
   Path: RV01/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638695264287821485
+  lastModified: 638696983244121329
   FileSizes:
   - Name: Desktop
-    Value: 4856448
+    Value: 4872736
+  Exists: 1
+--- !u!114 &-1580257409331534672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1318150899474222112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trombones/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1191462726544867235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-978578224224913151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-895837701700280965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Horns/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-851722125232452505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 2/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-822695916110248410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Horns/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-708110228496020069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trumpets/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-324502551011051851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 2/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-293964491950478116
 MonoBehaviour:
@@ -196,16 +814,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Flute 1
   Guid:
-    Data1: 828553902
-    Data2: 1309854946
-    Data3: -941812037
-    Data4: 1783329547
+    Data1: -661501761
+    Data2: 1323233326
+    Data3: 1933751428
+    Data4: 2143742149
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6074884571826616592}
+  - {fileID: 942005674788265938}
+  - {fileID: -6162588935935781234}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
@@ -225,7 +846,6 @@ MonoBehaviour:
   - {fileID: 5337021166900784106}
   - {fileID: -1690023304744012612}
   EditorEvents:
-  - {fileID: 922684560739358974}
   - {fileID: -9015668144604042110}
   - {fileID: 8909707115254011236}
   - {fileID: -2155816774814505216}
@@ -233,22 +853,119 @@ MonoBehaviour:
   - {fileID: -9209200473026027895}
   - {fileID: 4175808229469234526}
   - {fileID: -7732324047942465168}
-  - {fileID: 9204418362176647006}
   - {fileID: -293964491950478116}
   - {fileID: 4180198171320936318}
   - {fileID: -4314850455850608280}
-  - {fileID: 7753837950535612863}
   - {fileID: 7322726592970398110}
   - {fileID: 653461977442829237}
   - {fileID: 2479862360822425369}
-  - {fileID: -7964588155963408035}
+  - {fileID: 1076445370794505243}
+  - {fileID: 3147670713764752975}
+  - {fileID: 5991016052953059075}
+  - {fileID: -6432820274502358121}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1690023304744012612}
   StringsBanks:
   - {fileID: 5337021166900784106}
-  cacheTime: 638695264287831576
+  cacheTime: 638696983244131430
   cacheVersion: 131621
+--- !u!114 &56348627963821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 1/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &166675486471506047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &235235095907127137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &384339194467466380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 1/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &653461977442829237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,20 +980,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Percs 1
   Guid:
-    Data1: 71352043
-    Data2: 1079401885
-    Data3: -2135382636
-    Data4: 1863068996
+    Data1: -2106028319
+    Data2: 1223713256
+    Data3: 251251079
+    Data4: -193513819
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 5073616062236787199}
+  - {fileID: 2529715429048217154}
+  - {fileID: 384339194467466380}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
---- !u!114 &922684560739358974
+--- !u!114 &942005674788265938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 1/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1076445370794505243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,23 +1030,50 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Harpe 1
+  m_Name: event:/Harp 2
   m_EditorClassIdentifier: 
-  Path: event:/Harpe 1
+  Path: event:/Harp 2
   Guid:
-    Data1: 558659083
-    Data2: 1205222530
-    Data3: -1321220455
-    Data4: -723962456
+    Data1: -759517107
+    Data2: 1144806051
+    Data3: -531483728
+    Data4: 936579353
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 7710433190049777982}
+  - {fileID: -851722125232452505}
+  - {fileID: -5651309162476970276}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
+--- !u!114 &2055051157192208961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trombones/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2092929176435842539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,16 +1088,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Violin 1
   Guid:
-    Data1: 70967628
-    Data2: 1277857945
-    Data3: 1666516880
-    Data4: -800406398
+    Data1: -826360549
+    Data2: 1154926790
+    Data3: -1623340652
+    Data4: 720458016
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 235235095907127137}
+  - {fileID: 56348627963821}
+  - {fileID: 2733135870242248667}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
@@ -344,19 +1118,172 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Flute 2
   Guid:
-    Data1: -2036366092
-    Data2: 1318352111
-    Data3: 1614548104
-    Data4: -1733851885
+    Data1: 188130909
+    Data2: 1327804279
+    Data3: 1425672612
+    Data4: -805112625
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 3177544387908067677}
+  - {fileID: -7127669209857893869}
+  - {fileID: 8653583100655357479}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
+--- !u!114 &2519673685649349647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violas/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2529715429048217154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 1/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2733135870242248667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 1/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &2878469789789519361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 3/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3147670713764752975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Trumpets
+  m_EditorClassIdentifier: 
+  Path: event:/Trumpets
+  Guid:
+    Data1: 1073455764
+    Data2: 1153386234
+    Data3: 1358970814
+    Data4: 1992926474
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5046509565592843620}
+  - {fileID: -708110228496020069}
+  - {fileID: -8173719864846187221}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &3177544387908067677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4175808229469234526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,16 +1298,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Bass 2
   Guid:
-    Data1: -88709490
-    Data2: 1334888696
-    Data3: 846223266
-    Data4: -1278506812
+    Data1: -1752148247
+    Data2: 1321818573
+    Data3: 948872585
+    Data4: 1594050337
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -324502551011051851}
+  - {fileID: 8007372362122506692}
+  - {fileID: -3901771900905516081}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
@@ -398,19 +1328,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Violin 2
   Guid:
-    Data1: -1521208393
-    Data2: 1285229777
-    Data3: -1941604974
-    Data4: 1151266440
+    Data1: 1939820034
+    Data2: 1226612672
+    Data3: -387026551
+    Data4: 741176206
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6032491922209017853}
+  - {fileID: 8231159177922198732}
+  - {fileID: 5595031624493172412}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
+--- !u!114 &5046509565592843620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trumpets/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5073616062236787199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 1/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5337021166900784106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,10 +1407,232 @@ MonoBehaviour:
   Path: RV01/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638695264287831576
+  lastModified: 638696983244131430
   FileSizes:
   - Name: Desktop
-    Value: 1478
+    Value: 1624
+  Exists: 1
+--- !u!114 &5595031624493172412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 2/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5695732814516424173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Percs 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5991016052953059075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Harp 1
+  m_EditorClassIdentifier: 
+  Path: event:/Harp 1
+  Guid:
+    Data1: -2088056921
+    Data2: 1315256674
+    Data3: 673632954
+    Data4: 854504492
+  Banks:
+  - {fileID: -1690023304744012612}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2342933698507414522}
+  - {fileID: 6640990228709648295}
+  - {fileID: -4115980948210654433}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42666
+--- !u!114 &6032491922209017853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6074884571826616592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 1/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6209207872560775126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violas/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6640990228709648295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 1/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6701683984618570046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani/Pitch Shift
+  m_EditorClassIdentifier: 
+  Name: Pitch Shift
+  StudioPath: 
+  Min: 0.5
+  Max: 2
+  Default: 1
+  ID:
+    data1: 208328450
+    data2: 190523465
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7260134706687832679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Cello/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &7322726592970398110
 MonoBehaviour:
@@ -445,20 +1648,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Bass 1
   Guid:
-    Data1: 793919723
-    Data2: 1253658310
-    Data3: 995520949
-    Data4: -134064706
+    Data1: 1129957640
+    Data2: 1209355898
+    Data3: 1849710736
+    Data4: -453034655
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -1191462726544867235}
+  - {fileID: -7282930552113077865}
+  - {fileID: -8096807384229463087}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666
---- !u!114 &7753837950535612863
+--- !u!114 &7389654178328230646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,24 +1673,117 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Harpe 2
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Timpani/Volume
   m_EditorClassIdentifier: 
-  Path: event:/Harpe 2
-  Guid:
-    Data1: 266791132
-    Data2: 1238247216
-    Data3: 135709335
-    Data4: 227457516
-  Banks:
-  - {fileID: -1690023304744012612}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 42666
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7710433190049777982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Harp 2/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: -12
+  Max: 12
+  Default: 0
+  ID:
+    data1: 262099550
+    data2: 2934173250
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8007372362122506692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Bass 2/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8231159177922198732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Violin 2/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8653583100655357479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Flute 2/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 1
+  ID:
+    data1: 3563090594
+    data2: 3761115667
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8909707115254011236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,43 +1798,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Violin 3
   Guid:
-    Data1: -546911959
-    Data2: 1161117529
-    Data3: 2007372211
-    Data4: 811751138
+    Data1: -1313092755
+    Data2: 1289176292
+    Data3: 2126358967
+    Data4: 493103416
   Banks:
   - {fileID: -1690023304744012612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 42666
---- !u!114 &9204418362176647006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Trumpet
-  m_EditorClassIdentifier: 
-  Path: event:/Trumpet
-  Guid:
-    Data1: -1497692250
-    Data2: 1204169244
-    Data3: -842774627
-    Data4: 2106861370
-  Banks:
-  - {fileID: -1690023304744012612}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -6883386770781661239}
+  - {fileID: 2878469789789519361}
+  - {fileID: -4885574153327018650}
   MinDistance: 1
   MaxDistance: 20
   Length: 42666

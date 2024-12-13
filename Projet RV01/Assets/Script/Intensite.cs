@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,13 +12,19 @@ public class Intensite : MonoBehaviour
     [SerializeField]
     [Tooltip("The reference to the action of Trigger (gachette clic left).")]
     InputActionReference Trigger;
+    bool isActive = false;
 
     public Transform controller; // contrôleur
-    public float minHeight = -2.0f; // hauteur minimale
-    public float maxHeight = 2.0f;  // hauteur maximale
+    public float minHeight = -0.1f; // hauteur minimale
+    public float maxHeight = 0.1f;  // hauteur maximale
 
     private float initialHeight; // hauteur de départ du contrôleur
-    private float intensite; 
+    private float intensite = 1;
+    private float dIntensite = 0;
+
+    private float originPositionController;
+
+    private StudioEventEmitter[] studioEventEmitters;
 
     void Start()
     {
@@ -25,19 +32,31 @@ public class Intensite : MonoBehaviour
         {
             initialHeight = controller.position.y; //  hauteur initiale du contrôleur
         }
+        studioEventEmitters = FindObjectsOfType<StudioEventEmitter>();
+
+
+
     }
 
     void Update()
     {
-        if (controller != null)
+        if (controller != null  && isActive)
         {
+            // retourner une valeur entre 0 et 2  donc changer ca 
             // calcul différence de hauteur depuis la position initiale
-            float deltaHeight = controller.position.y - initialHeight;
+            float deltaHeight = Mathf.Clamp(controller.position.y - originPositionController, minHeight, maxHeight);
 
-            // normalisation de la différence pour qu'elle soit dans l'intervalle [-2, 2]
-            intensite = Mathf.Clamp(deltaHeight, minHeight, maxHeight);
+            // normalisation de la différence pour qu'elle soit dans l'intervalle [0, 2]
+            dIntensite = (deltaHeight - minHeight) / (maxHeight - minHeight) * 2.0f - 1.0f;
+            Debug.Log("deltaHeight : " + deltaHeight);
 
-            Debug.Log("Controller Height (Normalized): " + intensite);
+            Debug.Log("dIntensite : " + dIntensite);
+
+            foreach (StudioEventEmitter emitter in studioEventEmitters)
+            {
+                emitter.setIntensity(Mathf.Clamp(intensite + dIntensite, 0, 2));
+            }
+
         }
     }
     private void OnEnable()
@@ -57,14 +76,13 @@ public class Intensite : MonoBehaviour
     private void OnTrigger(InputAction.CallbackContext context)
     {
         Debug.Log("OnTrigger");
-        
-        // calcul différence de hauteur depuis la position initiale
-        float deltaHeight = controller.position.y - initialHeight;
+        originPositionController = controller.position.y;
+        isActive = !isActive;
 
-        // normalisation de la différence pour qu'elle soit dans l'intervalle [-2, 2]
-        intensite = Mathf.Clamp(deltaHeight, minHeight, maxHeight);
-
-        Debug.Log("Controller Height (Normalized): " + intensite);
+        if (!isActive)
+        {
+            intensite = Mathf.Clamp(intensite + dIntensite, 0, 2);
+        }
     }
     public float getIntensite()
     {

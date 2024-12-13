@@ -4,12 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+
 namespace FMODUnity
 {
     [AddComponentMenu("FMOD Studio/FMOD Studio Event Emitter")]
     public class StudioEventEmitter : EventHandler
     {
         public EventReference EventReference;
+
+        private static float SpeedMultiplierToPitchSemitones(float speed)
+        {
+            return 12f * Mathf.Log(speed, 2f);
+        }
+
+        private static float PitchSemitonesToSpeedMultiplier(float pitch)
+        {
+            return Mathf.Pow(2f, pitch / 12f);
+        }
 
         [Obsolete("Use the EventReference field instead.")]
         public string Event = "";
@@ -201,6 +212,19 @@ namespace FMODUnity
             }
         }
 
+        public void setSpeed(float speed)
+        {
+            float pitch = SpeedMultiplierToPitchSemitones(speed);
+            instance.setParameterByName("Pitch", pitch);
+            instance.setParameterByName("Pitch Shift", 1f/speed);
+        }
+
+        public void setIntensity(float intensity)
+        {
+            
+            instance.setParameterByName("Volume", intensity);
+        }
+
         public void Play()
         {
             if (TriggerOnce && hasTriggered)
@@ -243,7 +267,6 @@ namespace FMODUnity
                 PlayInstance();
             }
         }
-
         private void PlayInstance()
         {
             if (!instance.isValid())

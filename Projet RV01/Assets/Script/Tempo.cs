@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
+using CustomAudio;
 
 public class Tempo : MonoBehaviour
 {
@@ -64,14 +66,6 @@ public class Tempo : MonoBehaviour
     {
         Debug.Log("OnTrigger");
 
-        // clic gachette
-        // when(traverse obj temp){
-        // start timer
-        // if(entre en contacte avec obj tempo){
-        // count ++
-        // }
-        // 
-
         if (context.performed) // S'assurer que l'action est exécutée (et pas seulement commencée)
         {
             if (!isActive)
@@ -113,8 +107,10 @@ public class Tempo : MonoBehaviour
             isActive = false;
             timerRunning = false;
 
-            tempo = counter / timer;
+            tempo = counter / timer * 60 ;
             Debug.Log("Tempo: " + tempo);
+            AudioManager am = FindObjectOfType<AudioManager>();
+            am.setTempo(tempo);
         }
 
         return 0.0f; // bof voir si ca pose pas pb
