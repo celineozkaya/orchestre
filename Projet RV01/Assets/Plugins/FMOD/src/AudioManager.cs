@@ -27,7 +27,7 @@ namespace CustomAudio
 
         private float lastSpeed = 1f;
 
-        private const float base_tempo = 88;
+        private const float base_tempo = 135;
 
         private List<FMODUnity.StudioEventEmitter> emitters;
         private int index = 0;

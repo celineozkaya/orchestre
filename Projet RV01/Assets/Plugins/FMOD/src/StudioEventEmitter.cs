@@ -212,6 +212,7 @@ namespace FMODUnity
             }
         }
 
+        private float intensity = 1.0f;
         public void setSpeed(float speed)
         {
             float pitch = SpeedMultiplierToPitchSemitones(speed);
@@ -219,10 +220,15 @@ namespace FMODUnity
             instance.setParameterByName("Pitch Shift", 1f/speed);
         }
 
-        public void setIntensity(float intensity)
+        public void setIntensity(float t_intensity)
         {
-            
+            intensity = t_intensity;
             instance.setParameterByName("Volume", intensity);
+        }
+
+        public float getIntensity()
+        {
+            return intensity;
         }
 
         public void Play()

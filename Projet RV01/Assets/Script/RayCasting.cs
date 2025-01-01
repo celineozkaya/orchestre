@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.HighDefinition;
@@ -26,7 +27,7 @@ public class RayCasting : MonoBehaviour
     public float maxIntensity = 30f; // valeur min de l'intentsité de l'émission des spot sur les instruments
 
     private float offset = 0.0f;
-    private const int rayCastDistance = 200;
+    private const int rayCastDistance = 1000;
   
     // Start is called before the first frame update
     void Start(){
@@ -37,9 +38,6 @@ public class RayCasting : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate(){
-        //Debug.Log("fixed update");
-        //Debug.Log(" cam = " + camera.transform.forward);
-        // Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         Ray ray = new Ray(camera.transform.position, camera.transform.forward);
 
         //Debug.Log("Ray origin: " + ray.origin + ", Ray direction: " + ray.direction);
@@ -49,25 +47,28 @@ public class RayCasting : MonoBehaviour
         // lancer un rayon depuis le regard du casque
         if (Physics.Raycast(ray.origin, ray.direction, out hit, rayCastDistance, lookableLayer)){
             GameObject hitObject = hit.collider.gameObject; // l'objet détecté par le Raycast à l'instant T
-
+            //Debug.Log("hit object tag : " + hitObject.tag);
             if (hitObject != currentObject){
 
                 // réinitialiser l'objet précédent
                 if (currentObject != null && currentObject != selectedObject){
-                //if (currentObject != null){
 
-
-                        // retirer le highlight à currentObject
-                        // ResetEmission(currentObject);
+                    // retirer le highlight à currentObject
+                    // ResetEmission(currentObject);
+                    if (selectedObject == null)
+                    {
                         AdjustSpotlightIntensity(currentObject.tag, minIntensity); // baisser intensité du spot
+                    }
                 }
                 // appliquer le highlight sur le nouvel objet observé
                 if (hitObject != selectedObject){
                     // appliquer le highlight à hitObject
                     // SetEmission(hitObject,highlightColor);
                     Debug.Log("hitObject.tag : " + hitObject.tag);
-
-                    AdjustSpotlightIntensity(hitObject.tag, maxIntensity); // augmenter intensité du spot
+                    if (selectedObject == null)
+                    {
+                        AdjustSpotlightIntensity(hitObject.tag, maxIntensity); // augmenter intensité du spot
+                    }
                 }
 
                 currentObject = hitObject;
@@ -79,11 +80,13 @@ public class RayCasting : MonoBehaviour
             if (currentObject != null)
             {
 
-                    // retirer le highlight de currentObject
-                    // ResetEmission(currentObject);
-                    //Debug.Log("ici3");
-
-                AdjustSpotlightIntensity(currentObject.tag, minIntensity);
+                // retirer le highlight de currentObject
+                // ResetEmission(currentObject);
+                //Debug.Log("ici3");
+                if (selectedObject == null)
+                {
+                    AdjustSpotlightIntensity(currentObject.tag, minIntensity);
+                }
                 Debug.Log("currentObject.tag : "+ currentObject.tag);
             }
             currentObject = null;
@@ -116,28 +119,31 @@ public class RayCasting : MonoBehaviour
         }
     }*/
 
-    public static GameObject FindGameObjectWithLayerAndTag(int layer, string tag)
+    public static List<GameObject> FindGameObjectsWithLayerAndTag(int layer, string tag)
     {
         GameObject[] goArray = Object.FindObjectsOfType<GameObject>();
+        List<GameObject> returnArray = new List<GameObject> ();
 
         foreach (GameObject go in goArray)
         {
             if (go.layer == layer && go.CompareTag(tag))
             {
-                return go;
+                returnArray.Add(go);
             }
         }
 
-        return null;
+        return returnArray;
     }
 
     private void AdjustSpotlightIntensity(string tag, float targetIntensity)
     {
-        GameObject spot = FindGameObjectWithLayerAndTag(7, tag);
-        Debug.Log($"[AdjustSpotlightIntensity] Tag: {tag}, TargetIntensity: {targetIntensity}");
-        Debug.Log("nom spot : " + spot.name);
-
-        spot.GetComponent<HDAdditionalLightData>().SetIntensity(targetIntensity, LightUnit.Ev100);
+        List<GameObject> spots = FindGameObjectsWithLayerAndTag(7, tag);
+        //Debug.Log($"[AdjustSpotlightIntensity] Tag: {spot.tag}, TargetIntensity: {targetIntensity}");
+        //Debug.Log("nom spot : " + spot.name);
+        foreach (GameObject spot in spots)
+        {
+            spot.GetComponent<HDAdditionalLightData>().SetIntensity(targetIntensity, LightUnit.Ev100);
+        }
 
         
     }
@@ -160,37 +166,25 @@ public class RayCasting : MonoBehaviour
     // si clic sur side clic = grab move (> grip)
     // grip donne un float
   void OnGrab(InputAction.CallbackContext context)
-    {
+  {
         Debug.Log("dans OnGrab");
-
-        if (currentObject != null)
+        if (selectedObject != null) // si un groupe est selectionné
         {
-            if (currentObject == selectedObject)
-            {
-                Debug.Log("if currentObject == selectedObject");
-                // Désélectionner l'objet
-                AdjustSpotlightIntensity(selectedObject.tag, minIntensity);
-                Debug.Log("Désélection de l'objet : " + selectedObject.tag);
-                selectedObject = null;
-            }
-            else
-            {
-                Debug.Log("else - Sélection du nouvel objet");
-
-                // Si un autre objet était sélectionné, le réinitialiser
-                if (selectedObject != null)
-                {
-                    Debug.Log("Réinitialisation de l'objet sélectionné précédent : " + selectedObject.tag);
-                    AdjustSpotlightIntensity(selectedObject.tag, minIntensity);
-                }
-
-                // Sélectionner le nouvel objet
-                selectedObject = currentObject;
-                AdjustSpotlightIntensity(selectedObject.tag, maxIntensity);
-                Debug.Log("Nouvel objet sélectionné : " + selectedObject.tag);
-            }
+            Debug.Log("si un groupe est selectionné");
+            // Désélectionner l'objet
+            AdjustSpotlightIntensity(selectedObject.tag, minIntensity);
+            selectedObject = null;
+            Debug.Log("Désélection de l'objet : " + selectedObject.tag);
         }
-    }
+        else if (currentObject != null) // sinon si je regarde un grp
+        {
+
+            // Sélectionner le nouvel objet
+            selectedObject = currentObject;
+            AdjustSpotlightIntensity(selectedObject.tag, maxIntensity);
+            Debug.Log("Nouvel objet sélectionné : " + selectedObject.tag);
+        }
+}
 
     public GameObject getSelectedObject()
     {

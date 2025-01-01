@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
@@ -11,17 +11,23 @@ public class Tempo : MonoBehaviour
     [SerializeField]
     [Tooltip("The reference to the action of Trigger (gachette clic right).")]
     InputActionReference Trigger;
-    public GameObject tempoObject; //obj tempo 
-    public Transform controller; // transform du controller conserné
+    public GameObject tempoObject; //objet tempo
+    private GameObject tempoCapsule;
+    public Transform controller; // transform du controller qu'on utilise
     public Camera camera; // main camera du XR Origin
-    public float distanceFromUser = 1.5f; // distance de user à laquelle placer l'obj tempo 
-    public float rayLength = 5f;    // taille du rayon sortant du controlleur
-    private float tempo; // tempo
+    public float distanceFromUser = 0.2f; // distance à laquelle on met obj tempo par rapport a user
+    private float tempo; // valeur du tempo
 
     private bool isActive = false; //  indique si tempoObject est actif dans la scène
     private bool timerRunning = false; // indique si le timer est en cours d'exécution
     private float timer = 0f;
     private int counter = 0;
+
+    private void Start()
+    {
+        tempoCapsule = GameObject.Find("Tempo Capsule");
+        tempoCapsule.SetActive(false);
+    }
 
     // timer
     void Update()
@@ -31,19 +37,10 @@ public class Tempo : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        // Perform raycast to detect collision with tempoObject.
+        // raycast pour collisions entre rayon du controller et l'obj tempo
         if (isActive)
         {
-            Ray ray = new Ray(controller.position, controller.forward);
-            RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, rayLength))
-            {
-                if (hit.collider.gameObject == tempoObject)
-                {
-                    HandleRayCollision();
-                }
-            }
         }
     }
 
@@ -58,15 +55,16 @@ public class Tempo : MonoBehaviour
     private void OnDisable()
     {
         Trigger.action.performed -= OnTrigger; // retirer listener pour le trigger
-        Trigger.action.Disable(); // deactiver action
+        Trigger.action.Disable(); // desactiver action
 
     }
 
+    // quand on trigger la gachette, si l'obj tempo pas actif : activer l'objet tempo sinon arreter la mesure du tempo
     private void OnTrigger(InputAction.CallbackContext context)
     {
         Debug.Log("OnTrigger");
 
-        if (context.performed) // S'assurer que l'action est exécutée (et pas seulement commencée)
+        if (context.performed) // verif que l'action est exécutée (et pas seulement commencée)
         {
             if (!isActive)
             {
@@ -81,6 +79,7 @@ public class Tempo : MonoBehaviour
         }
     }
 
+    // activer l'objet tempo sur la scene
     void ActivateTempoObject()
     {
         if (camera != null)
@@ -90,6 +89,7 @@ public class Tempo : MonoBehaviour
             tempoObject.transform.position = positionTempo;
 
             tempoObject.SetActive(true);
+            tempoCapsule.SetActive(true);
             isActive = true;
             timer = 0f;
             counter = 0;
@@ -104,6 +104,7 @@ public class Tempo : MonoBehaviour
         if (isActive)
         {
             tempoObject.SetActive(false);
+            tempoCapsule.SetActive(false);
             isActive = false;
             timerRunning = false;
 
@@ -116,8 +117,8 @@ public class Tempo : MonoBehaviour
         return 0.0f; // bof voir si ca pose pas pb
     }
 
-    // gere collision entre le rayon du controller et tempoObject
-    void HandleRayCollision()
+    // gère collision entre le rayon du controller et tempoObject
+    public void HandleObjectCollision()
     {
         if (!timerRunning)
         {
