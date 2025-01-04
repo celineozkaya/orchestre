@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
@@ -12,14 +11,13 @@ public class Tempo : MonoBehaviour
     [Tooltip("The reference to the action of Trigger (gachette clic right).")]
     InputActionReference Trigger;
     public GameObject tempoObject; //objet tempo
-    private GameObject tempoCapsule;
+    private GameObject tempoCapsule; 
     public Transform controller; // transform du controller qu'on utilise
     public Camera camera; // main camera du XR Origin
-    public float distanceFromUser = 0.2f; // distance à laquelle on met obj tempo par rapport a user
+    public float distanceFromUser = 0.2f; // distance a laquelle on met obj tempo par rapport a user
     private float tempo; // valeur du tempo
-
-    private bool isActive = false; //  indique si tempoObject est actif dans la scène
-    private bool timerRunning = false; // indique si le timer est en cours d'exécution
+    private bool isActive = false; //  indique si tempoObject est actif dans la scene
+    private bool timerRunning = false; // indique si le timer est en cours d'execution
     private float timer = 0f;
     private int counter = 0;
 
@@ -36,12 +34,6 @@ public class Tempo : MonoBehaviour
         {
             timer += Time.deltaTime;
         }
-
-        // raycast pour collisions entre rayon du controller et l'obj tempo
-        if (isActive)
-        {
-
-        }
     }
 
 
@@ -49,14 +41,12 @@ public class Tempo : MonoBehaviour
     {
         Trigger.action.Enable(); // activer action
         Trigger.action.performed += OnTrigger; // listener pour le trigger
-
     }
 
     private void OnDisable()
     {
         Trigger.action.performed -= OnTrigger; // retirer listener pour le trigger
         Trigger.action.Disable(); // desactiver action
-
     }
 
     // quand on trigger la gachette, si l'obj tempo pas actif : activer l'objet tempo sinon arreter la mesure du tempo
@@ -64,16 +54,16 @@ public class Tempo : MonoBehaviour
     {
         Debug.Log("OnTrigger");
 
-        if (context.performed) // verif que l'action est exécutée (et pas seulement commencée)
+        if (context.performed) // verif que l'action est execute (et pas seulement commencee)
         {
             if (!isActive)
             {
-                Debug.Log("appel de ActivateTempoObject");
+                //Debug.Log("appel de ActivateTempoObject");
                 ActivateTempoObject();
             }
             else
             {
-                Debug.Log("appel de StopTimer");
+                //Debug.Log("appel de StopTimer");
                 StopTimer();
             }
         }
@@ -84,8 +74,7 @@ public class Tempo : MonoBehaviour
     {
         if (camera != null)
         {
-            // place tempoObject devant user
-            Vector3 positionTempo = camera.transform.position + camera.transform.forward * distanceFromUser;
+            Vector3 positionTempo = camera.transform.position + camera.transform.forward * distanceFromUser; // place tempoObject devant user
             tempoObject.transform.position = positionTempo;
 
             tempoObject.SetActive(true);
@@ -99,7 +88,6 @@ public class Tempo : MonoBehaviour
     // arrete le timer et retourne le tempo
     float StopTimer()
     {
-        Debug.Log("dans StopTimer");
 
         if (isActive)
         {
@@ -109,15 +97,15 @@ public class Tempo : MonoBehaviour
             timerRunning = false;
 
             tempo = counter / timer * 60 ;
-            Debug.Log("Tempo: " + tempo);
+            //Debug.Log("Tempo: " + tempo);
             AudioManager am = FindObjectOfType<AudioManager>();
             am.setTempo(tempo);
         }
 
-        return 0.0f; // bof voir si ca pose pas pb
+        return 0.0f; 
     }
 
-    // gère collision entre le rayon du controller et tempoObject
+    // gere collision entre le rayon du controller et tempoObject
     public void HandleObjectCollision()
     {
         if (!timerRunning)
@@ -127,12 +115,13 @@ public class Tempo : MonoBehaviour
 
         counter++;
         Debug.Log("counter : " + counter);
-        // retour haptic (vibration à chaque passage dans l'objet tempo)
+        // retour haptic (vibration a chaque passage dans l'objet tempo)
         HapticImpulsePlayer haptic = controller.GetComponent<HapticImpulsePlayer>();
         haptic.SendHapticImpulse(1, 0.1f, 30);
 
     }
 
+    // getter du tempo
     public float getTempo()
     {
         return tempo;

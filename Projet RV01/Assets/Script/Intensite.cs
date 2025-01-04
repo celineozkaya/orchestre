@@ -5,9 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
-
-// TESTER AVEC CASQUE 
+// gestion de l'intensite du morceau
 public class Intensite : MonoBehaviour
 {
     [SerializeField]
@@ -15,18 +13,15 @@ public class Intensite : MonoBehaviour
     InputActionReference Trigger;
     bool isActive = false;
 
-    public Transform controller; // contrôleur
+    public Transform controller; // controleur
     public Transform headset; // casque
     RayCasting rc;
     public float minHeight; // hauteur minimale
     public float maxHeight;  // hauteur maximale
-
-    private float initialHeight; // hauteur de départ du contrôleur
+    private float initialHeight; // hauteur de dï¿½part du contrï¿½leur
     private float intensite = 1;
     private float dIntensite = 0;
-
     private float originPositionController;
-
     private GameObject[] audioSources;
 
     void Start()
@@ -34,7 +29,7 @@ public class Intensite : MonoBehaviour
         rc = Object.FindObjectOfType<RayCasting>();
         if (controller != null)
         {
-            initialHeight = controller.position.y; //  hauteur initiale du contrôleur
+            initialHeight = controller.position.y; //  hauteur initiale du controleur
         }
         audioSources = new GameObject[21];
         GameObject[] go = Object.FindObjectsOfType<GameObject>();
@@ -47,9 +42,6 @@ public class Intensite : MonoBehaviour
                 Debug.Log("Added Audio Source : " + obj.tag);
             }
         }
-
-
-
     }
 
     void Update()
@@ -57,14 +49,12 @@ public class Intensite : MonoBehaviour
         GameObject reference = rc.getSelectedObject();
         if (controller != null  && isActive)
         {
-            // retourner une valeur entre 0 et 2  donc changer ca 
-            // calcul différence de hauteur depuis la position initiale
+            // calcul difference de hauteur depuis la position initiale du controleur
             float deltaHeight = Mathf.Clamp(controller.position.y - originPositionController, minHeight, maxHeight);
 
-            // normalisation de la différence pour qu'elle soit dans l'intervalle [-1, 1]
+            // normalisation de la difference
             dIntensite = ((deltaHeight - minHeight) / (maxHeight - minHeight)) * 2.0f - 1.0f;
             Debug.Log("deltaHeight : " + deltaHeight);
-
             Debug.Log("dIntensite : " + dIntensite);
 
             foreach (GameObject obj in audioSources)
@@ -74,8 +64,8 @@ public class Intensite : MonoBehaviour
                     obj.GetComponent<StudioEventEmitter>().setIntensity(Mathf.Clamp(intensite + dIntensite, 0, 2));
                 }
             }
-
-        } else if (controller != null)
+        } 
+        else if (controller != null)
         {
             if (controller.position.y > headset.position.y + 0.2)
             {
@@ -103,6 +93,7 @@ public class Intensite : MonoBehaviour
 
     }
 
+    // input action associee a l'intensite
     private void OnTrigger(InputAction.CallbackContext context)
     {
         Debug.Log("OnTrigger");
@@ -132,6 +123,8 @@ public class Intensite : MonoBehaviour
             }
         }
     }
+    
+    // getter pour la valeur de l'intensite
     public float getIntensite()
     {
         return intensite;
